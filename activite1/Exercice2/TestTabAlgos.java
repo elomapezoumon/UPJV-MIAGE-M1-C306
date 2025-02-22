@@ -16,7 +16,7 @@ public final class TestTabAlgos {
     public void testPlusGrand() {
         final int var1 = 7;
         final int var2 = 596;
-        final int var3 = 5;
+        final int var3 = 22;
         final int var4 = 10;
         final int var5 = -4;
         final int[] tab1 = {1, 5, 3, 7, 2};
@@ -55,7 +55,7 @@ public final class TestTabAlgos {
         final int[] tab4 = {11};
         final int[] tab6 = {};
         assertEquals(var1, TabAlgos.moyenne(tab1));
-        assertEquals(var2, TabAlgos.moyenne(tab1));
+        assertEquals(var2, TabAlgos.moyenne(tab2));
         assertEquals(var3, TabAlgos.moyenne(tab3));
         assertEquals(var4, TabAlgos.moyenne(tab4));
         assertThrows(IllegalArgumentException.class, () -> {
@@ -73,7 +73,7 @@ public final class TestTabAlgos {
     public void testEgaux() {
         final int[] tab1 = {5, 6, 89};
         final int[] tab2 = {61, Integer.MIN_VALUE, 23, Integer.MAX_VALUE, 96};
-        final int[] tab3 = {23, Integer.MIN_VALUE, 96, Integer.MAX_VALUE, 61};
+        final int[] tab3 = {61, Integer.MIN_VALUE, 23, Integer.MAX_VALUE, 96};
         final int[] emptyTab = {};
         final int[] tab4 = {1, 2, 3};
         final int[] tab5 = {3, 2, 1};

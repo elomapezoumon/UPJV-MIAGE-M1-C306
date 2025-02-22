@@ -4,12 +4,10 @@
 public final class TabAlgos {
 
     /**
-     * Constructeur protected avec exception
-     * pour empecher l'instantiation de la classe.
-     * @throws Exception
+     * Empecher l'instantiation de la classe.
     */
-    protected TabAlgos() throws Exception {
-        throw new Exception("cette classe ne peut pas être instanciée");
+    protected TabAlgos() {
+        throw new UnsupportedOperationException("Instanciation Interdite");
     }
 
     /**
@@ -40,7 +38,7 @@ public final class TabAlgos {
             throw new IllegalArgumentException("Le tableau est vide ou null");
         }
         int sum = 0;
-        for (int i = 1; i < tab.length; i++) {
+        for (int i = 0; i < tab.length; i++) {
             sum += tab[i];
         }
         return (double) sum / tab.length;
