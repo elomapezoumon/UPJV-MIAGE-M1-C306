@@ -1,27 +1,37 @@
-// Source code is decompiled from a .class file using FernFlower decompiler.
+/** Classe Produit représentant un produit avec un prix et une référence */
 public class Produit {
    private final String reference;
    private double prix;
-   double tva = 0.2;
+   double tva = 0.20;
 
-   public Produit(String var1) {
-      this.reference = var1;
+   public Produit(String reference) {
+      this.reference = reference;
    }
 
+   /** @return le prix */
    public double getPrix() {
       return this.prix;
    }
 
-   public final void setPrix(Double var1) {
-      this.prix = var1;
+   /** modifie le prix */
+   public final void setPrix(Double prix) {
+      this.prix = prix;
    }
 
+   /**
+    * @return la reference si le prix est positif, null sinon
+    */
    public final String getReference() {
-      String var1 = this.reference;
-      return this.prix > 0.0 ? var1 : null;
+      String resultat = this.reference;
+      if (this.prix > 0) {
+         return resultat;
+      } else {
+         return null;
+      }
    }
 
-   public boolean equals(Object var1) {
-      return this.reference == ((Produit)var1).reference;
+   @Override
+   public boolean equals(Object o) {
+      return reference == ((Produit) o).reference;
    }
 }

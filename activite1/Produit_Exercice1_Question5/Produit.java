@@ -59,15 +59,6 @@ public class Produit {
      */
     @Override
     public boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null) {
-            return false;
-        }
-        if (getClass() != o.getClass()) {
-            return false;
-        }
         return Objects.equals(this.reference, ((Produit) o).reference);
     }
 
@@ -77,7 +68,6 @@ public class Produit {
     @Override
     public int hashCode() {
         final int hash = 3;
-        int calcHash = hash + Objects.hashCode(this.reference);
-        return calcHash;
+        return hash + Objects.hashCode(this.reference);
     }
 }
