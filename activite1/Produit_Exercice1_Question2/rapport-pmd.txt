@@ -1,3 +1,0 @@
-.\Produit.java:2:	NoPackage:	All classes, interfaces, enums and annotations must belong to a named package
-.\Produit.java:34:	OverrideBothEqualsAndHashcode:	Ensure you override both equals() and hashCode()
-.\Produit.java:35:	UseEqualsToCompareStrings:	Use equals() to compare strings instead of '==' or '!='

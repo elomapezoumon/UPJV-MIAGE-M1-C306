@@ -1,1 +1,0 @@
-.\Produit.java:7:	NoPackage:	All classes, interfaces, enums and annotations must belong to a named package

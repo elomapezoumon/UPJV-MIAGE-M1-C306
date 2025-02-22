@@ -5,7 +5,7 @@ public final class TabAlgos {
 
     /**
      * Empecher l'instantiation de la classe.
-    */
+     */
     protected TabAlgos() {
         throw new UnsupportedOperationException("Instanciation Interdite");
     }
@@ -82,16 +82,28 @@ public final class TabAlgos {
         if (tab1.length != tab2.length) {
             return false;
         }
-        int[] count1 = {};
-        int[] count2 = {};
+        int n = tab1.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (tab1[j] > tab1[j + 1]) {
+                    int temp = tab1[j];
+                    tab1[j] = tab1[j + 1];
+                    tab1[j + 1] = temp;
+                }
+            }
+        }
+        n = tab2.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (tab2[j] > tab2[j + 1]) {
+                    int temp = tab2[j];
+                    tab2[j] = tab2[j + 1];
+                    tab2[j + 1] = temp;
+                }
+            }
+        }
         for (int i = 0; i < tab1.length; i++) {
-            count1[tab1[i]]++;
-        }
-        for (int i = 0; i < tab2.length; i++) {
-            count2[tab2[i]]++;
-        }
-        for (int i = 0; i < count1.length; i++) {
-            if (count1[i] != count2[i]) {
+            if (tab1[i] != tab2[i]) {
                 return false;
             }
         }
